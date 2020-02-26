@@ -1,0 +1,262 @@
+/*
+	Theme Name: meter 
+	Author: Karitas Webdesign
+	Version: 1.0
+*/
+
+body {
+	max-width: 800px;
+	margin: 0 auto;
+	font-family: 'Helvetica', sans-serif;
+	color: #292929;
+}
+main{
+	margin-top: 100px;
+}
+
+
+/**************************** HEADER *****************************/
+.header-logo{
+	display: block;
+	margin: 0 auto;
+	width: 250px;
+	padding-top: 100px;
+}
+.header_nav{
+	margin-bottom: 100px;
+}
+.menu{
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	margin-top: 50px;
+}
+.menu-item{
+	text-align: center;
+	margin: 0 50px 0 0;
+	font-weight: 100;
+	list-style-type: none;
+	text-transform: uppercase;
+	font-size: 1.2em;
+}
+.menu-item:last-child{
+	margin: 0 0 0 0;
+}
+.menu-item a{
+	text-decoration: none;
+	color: #292929;
+}
+.current-menu-item{
+	background: rgba(0, 0, 0, 0.8);
+	padding: 2px 8px;
+}
+.current-menu-item ul ul{
+	background: unset;
+}
+.header_nav ul li:hover > ul {
+	display: block;
+}
+.header_nav ul ul{
+	display: none;
+	font-size: 0.8em;
+}
+.header_nav ul ul a{
+	padding: 0 10px;
+	margin: 10px 0;
+	list-style: inside;
+}
+#menu-item-54 {
+	position:relative;
+}
+#menu-item-54 ul {
+	padding: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+}
+.header_nav ul li ul li a:hover{
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	transition: all 0.3s ease;
+}
+.current_page_item a{
+	color: white;
+}
+.current_page_item:last-child{
+	padding: 2px 10px;
+}
+
+
+/************************** HOME **************************/
+.gallery-image{
+	display: block;
+	margin: 0 auto;
+	max-width: 700px;
+}
+.gallery-text{
+	font-size: small;
+	font-weight: 100;
+	text-align: center;
+}
+
+
+/************************* NEWS ******************************/
+.news_post_box{
+	display: flex;
+	align-items: center;
+	padding: 50px 0;
+}
+.news_image_thumbnails{
+	max-width: 150px;
+}
+.news_post_infoText{
+	margin-left: 40px;
+}
+.news_post_date{
+	font-weight: 300;
+	margin: 0;
+}
+.news_post_headerText{
+	font-size: 1.5em;
+	margin: 10px 0 20px 0;
+}
+.news_post_mainText{
+	margin: 0;
+}
+.news_post_button{
+	margin-top: 20px;
+	border: none;
+	background: rgba(0, 0, 0, 0.8);
+	padding: 10px;
+	text-align: center;
+}
+.news_post_button a{
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 300;
+	margin: 0;
+}
+.news_post_lineBorder{
+	border: solid 1px #292929;
+	background-color: #292929;
+	width: 60vw;
+}
+.news_post_text{
+	margin-left: 20px;
+}
+
+/************************** SINGLE PAGE ************************/
+.singlePage_linkBack a{
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #292929;
+	font-weight: lighter;
+	padding: 0 10px;
+	text-align: center;
+}
+.singlePage_linkBack:hover{
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	transition: all 0.3s ease;
+	font-weight: 800;
+	width: 150px;
+}
+.singlePage_headerBox{
+	margin-top: 50px;
+	display: flex;
+	align-items: center;
+}
+.singlePage_headerText{
+	margin-left: 30px;
+}
+.singlePage_contentText{
+	padding-top: 30px;
+}
+.singlePage_tags-links{
+	text-decoration: none;
+	color: #292929;
+	padding: 0 10px;
+	margin: 0 20px 0 10px;
+	font-weight: lighter;
+}
+.singlePage_tags-links:hover{
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	transition: all 0.3s ease;
+	font-weight: bolder;
+	width: 140px;
+}
+
+
+/************************* ARCHIVE **************************/
+.archive_get-link-header-text{
+	font-weight: 300;
+	padding-bottom: 20px;
+	text-transform: uppercase;
+	border-bottom: 2px solid black;
+	margin-bottom: 70px;
+}
+
+
+/************************* FOOTER ***************************/
+footer{
+	margin-bottom: 40px;
+}
+.footer_info{
+	margin: 150px 0 100px 0;
+	display: flex;
+}
+div .footer_info-border-line-first{
+	margin-left: 0;
+}
+.footer_info-border-line{
+	border: solid 1px #292929;
+	background-color: #292929;
+	height: 300px;
+	margin: 0 50px;
+}
+div .footer_info-border-line-last{
+	margin-right: 0;
+}
+.footer_info-box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer_info-innerbox{
+	align-self: flex-start;
+	padding-top: 20px;
+}
+.footer_info-text{
+	font-weight: 200;
+	margin: 5px 0;
+}
+.footer_info-social-icons{
+	margin: 5px 15px;
+	font-size: 2.5em;
+}
+.footer_icons-link{
+	color: #292929;
+}
+.footer_header-text{
+	font-size: 1em;
+	font-weight: 400;
+	padding-bottom: 20px;
+	text-transform: uppercase;
+}
+.footer_info-privatePolicy a{
+	text-decoration: none;
+	color: #292929;
+	font-weight: 200;
+}
+.footer_support-images{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-left: 70px;
+}
+.footer_support-image{
+	height: 70px;
+	margin: 20px;
+}
