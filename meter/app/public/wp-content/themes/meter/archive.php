@@ -21,7 +21,7 @@
 			<h6 class="news_post_date news_post_text"><?php the_time('j F, Y'); ?></h6>
 			<h4 class="news_post_headerText news_post_text"><?php the_title(); ?></h4>
 			<div class="news_post_lineBorder"></div>
-			<p class="news_post_mainText news_post_text"><?php the_excerpt(); ?></p>
+			<p class="news_post_mainText news_post_text"><?php echo wp_trim_words(get_the_content(), 50); ?></p>
 			<button class="news_post_button"><a href="<?php the_permalink(); ?>">Read More</a></button>
 		</div>
 		</section>

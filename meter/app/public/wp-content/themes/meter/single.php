@@ -1,6 +1,6 @@
 <?php 
 	get_header(); ?>
-<p class="singlePage_linkBack"><a href="<?php echo site_url('/news') ?>">Back to news</a></p>
+<p class="singlePage_linkBack"><a href="<?php echo site_url('/news') ?>">Back to News</a></p>
 <?php	while(have_posts()) {
 		the_post(); ?>
 		<div class="singlePage_headerBox">
@@ -10,14 +10,16 @@
 		<p class="singlePage_contentText"><?php the_content(); ?></p>
 		<?php 
 			$tags = get_the_tags(); 
-			if( $tags ) foreach( $tags as $tag ) { ?>
+			if( $tags ) {
+				foreach( $tags as $tag ) { ?>
 				<a class="singlePage_tags-links" href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
-			<?php break; } 
+			<?php } }
 
-			$categories = get_categories();
-			if( $categories ) foreach($categories as $category) { ?>
+			$categories = get_the_category();
+			if( $categories ) {
+				foreach($categories as $category) { ?>
 				 <a class="singlePage_tags-links" href="<?php echo get_category_link($category->term_id); ?>"><?php echo $category->name; ?></a>  
-			<?php break; }
+			<?php }}
 		}
 	get_footer();
 ?>

@@ -9,7 +9,7 @@
 	</head>
 	<body <?php body_class(); ?>>
 	<header>
-		<a href="<?php echo site_url('/') ?>"><img class="header-logo" src="<?php echo get_theme_file_uri('/images/meter-logo.jpg') ?>" alt="meter Logo"></a>
+		<a href="<?php echo site_url('/') ?>"><img class="header-logo" src="<?php echo get_theme_file_uri('/images/Logo.svg') ?>" alt="meter Logo"></a>
 		<nav class="header_nav">
 			<?php 
          	 wp_nav_menu(array(
