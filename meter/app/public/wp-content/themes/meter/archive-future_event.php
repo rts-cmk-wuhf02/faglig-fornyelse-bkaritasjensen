@@ -5,8 +5,24 @@
 <h1 class="project_headerText">Future</h1>
 
 <?php 
-	while(have_posts()){
-		the_post(); ?>
+	$today = date('Ymd');
+	$homepageEvents = new WP_Query(array(
+  		'post_type' => 'future_event',
+  		'meta_key' => 'event_date',
+  		'orderby' => 'meta_value_num',
+  		'order' => 'ASC',
+  		'meta_query' => array(
+			array(
+	  			'key' => 'event_date',
+	  			'compare' => '>=',
+	  			'value' => $today,
+	  			'type' => 'numeric'
+			)
+  		)
+	));
+
+	while($homepageEvents->have_posts()){
+		$homepageEvents->the_post(); ?>
 		<section class="news_post_box">
 		<div class="news_post_infoText">
 			<h6 class="news_post_date news_post_text">Date: <?php 
@@ -33,8 +49,8 @@
 				foreach($categories as $category) { ?>
 				 <a class="singlePage_tags-links" href="<?php echo get_category_link($category->term_id); ?>"><?php echo $category->name; ?></a>
 
-	<?php 	}}
-		}
+	<?php 	}};
+	}
 		echo paginate_links();
 ?>
 
